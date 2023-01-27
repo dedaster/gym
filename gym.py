@@ -34,11 +34,11 @@ while True:
             print()
             print(Fore.BLACK + Back.WHITE + 'Упражнение: '+(result.Name.iloc[i]) + Style.RESET_ALL)
             print()
-            for j in range (3):
+            for j in range (result.Repeats.iloc[i]):
                 print('Подход', j+1, sep=' ', end=' ', )
                 x = int(input('повторов: '))
                 xm += x
-                ex_res = int((xm/3)+1)
+                ex_res = int((xm/result.Repeats.iloc[i])+1)
             print()
             
             # заносим изменения в нашу базу упражнений
